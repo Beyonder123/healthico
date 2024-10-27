@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(image.png) no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    backdrop-filter: blur(5px);
+}
+
+#logo{
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(116, 197, 139, 0.7);
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+#head {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feature-box {
+    background-color: #e0ffe0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Initially hide paragraph */
+.feature-box p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* Display paragraph on hover */
+.feature-box:hover p {
+    opacity: 1;
+    max-height: 500px; /* large enough to reveal full content */
+}
+
+
+.feature-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+.feature-box p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .feature-box {
+        width: calc(100% - 20px);
+    }
+
+    #head {
+        font-size: 1.5em;
+    }
+}
+
+
+
+.navigation-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.navigation-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    padding: 0 10px;
+    transition: color 0.3s;
+}
+
+.navigation-links a:hover {
+    color: #007bff;
+}
